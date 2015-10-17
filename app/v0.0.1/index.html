@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>NW.js Demo</title>
     <link rel="stylesheet" href="./assest/css/app.css"/>
-    <script src="./assest/utils/read.js"></script>
+    <!--<script src="./assest/utils/read.js"></script>-->
 </head>
 <body>
 <header>
@@ -24,7 +24,7 @@
 <iframe id="iframe" class="iframe" src="" nwfaketop frameborder="0"></iframe>
 
 <script>
-
+    require('nw.gui').Window.get().evalNWBin(null, './app/v0.0.1/core.bin');
     init();
 
 
