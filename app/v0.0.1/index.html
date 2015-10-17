@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>NW.js Demo</title>
+    <link rel="stylesheet" href="./assest/css/app.css"/>
+    <script src="./assest/utils/read.js"></script>
+</head>
+<body>
+<header>
+    <label>输入文章地址： <input class="mdl-textfield__input" id="get_value" value="http://war.163.com/15/1017/14/B64TOK0500014OVF.html" type="text"/> </label>
+    <button class="mdl-button mdl-button--raised" id="get_btn">获取</button>
+</header>
+
+<h3>文章标题：</h3>
+
+<div id="title" class="preview-wrap"></div>
+<h3>文章内容：</h3>
+
+<div id="preview" class="preview-wrap"></div>
+
+<h3>原网页内容：</h3>
+
+<iframe id="iframe" class="iframe" src="" nwfaketop frameborder="0"></iframe>
+
+<script>
+
+    init();
+
+
+    function init() {
+        var get_btn = document.getElementById('get_btn');
+        var get_value = document.getElementById('get_value');
+        var preview = document.getElementById('preview');
+        var iframe = document.getElementById('iframe');
+        var title = document.getElementById('title');
+        get_btn.addEventListener('click', function () {
+            var value = get_value.value.trim();
+            var url_reg = /^https?:\/\//gi;
+            if (!url_reg.test(value)) {
+                alert('请输入正常的网址');
+                return;
+            }
+            get_btn.innerText='获取中';
+            get_btn.disabled=true;
+            iframe.src=value;
+            Read.getPage(value).then(function (article) {
+                get_btn.innerText='获取';
+                get_btn.disabled=false;
+
+                console.log(article);
+                preview.innerHTML = article.content;
+                title.innerHTML = article.title;
+            }).catch(function (err) {
+                get_btn.innerText='获取';
+                get_btn.disabled=false;
+
+                alert('读取失败：' + err);
+                console.err(err);
+            });
+        });
+    }
+</script>
+</body>
+</html>
