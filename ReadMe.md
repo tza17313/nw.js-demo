@@ -1,5 +1,5 @@
-### NW.js Èë¿ÓÖ¸ÄÏ
-½éÉÜÈç¹ûÊ¹ÓÃNW.js´î½¨Ò»¸ö×ÀÃæÓ¦ÓÃ£¬ ¾ßÌå½éÉÜ ·ÃÎÊ [ÕâÀï](http://nero-zou.com/nw-js-intro/)£»
+### NW.js å…¥å‘æŒ‡å—
+ä»‹ç»å¦‚æœä½¿ç”¨NW.jsæ­å»ºä¸€ä¸ªæ¡Œé¢åº”ç”¨ï¼Œ å…·ä½“ä»‹ç» è®¿é—® [è¿™é‡Œ](https://segmentfault.com/a/1190000003870613/)ï¼›
 
 ### NW.js Demo Intro
-show you how to use NW.js,build native apps. see more click [here](http://nero-zou.com/nw-js-intro/)£»
+show you how to use NW.js,build native apps. see more click [here](https://segmentfault.com/a/1190000003870613)ï¼›
